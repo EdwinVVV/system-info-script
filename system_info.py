@@ -63,4 +63,14 @@ def format_report():
     return "\n".join(lines)
 
 if __name__ == "__main__":
-    print(format_report())
+    report = format_report()
+
+    # Print to console
+    print(report)
+
+    # Save report automatically to file
+    filename = "system_report.txt"
+    with open(filename, "w") as f:
+        f.write(report)
+
+    print(f"\nReport saved to {filename}")
